@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"
+        integrity="sha256-tHoAPGoNdhIR28YHl9DWLzeRfdwigkH7OCBXMrHXhoM=" crossorigin="anonymous"></script>
+    <title>Choropleth Map</title>
+</head>
+
+<body>
+    <h2 id="title">Covid-19 Cases by State</h2>
+    
+    <div id='container'>
+        <svg id='canvas'>
+    
+        </svg>
+        <div id='rightSide'>
+            <div id='toolTip'></div>
+            <svg id='legend'>
+        <g>
+        <rect x="10" y="0" height="40" width="40" fill="#ffb8b8"></rect>
+        <text x="60" y="20" fill="black">less than 20%</text>
+        </g>
+        <g>
+        <rect x="10" y="40" height="40" width="40" fill="#ff7070"></rect>
+        <text x="60" y="60" fill="black">less than 25%</text>
+        </g>
+        <g>
+        <rect x="10" y="80" height="40" width="40" fill="#ff4242"></rect>
+        <text x="60" y="100" fill="black">less than 30%</text>
+        </g>
+        <g>
+        <rect x="10" y="120" height="40" width="40" fill="#ff0000"></rect>
+        <text x="60" y="140" fill="black">less than 35%</text>
+        </g>
+        <g>
+            <rect x="10" y="160" height="40" width="40" fill="#850000"></rect>
+            <text x="60" y="180" fill="black">over 35%</text>
+        </g>
+    </svg>
+    <div id="description">
+        Positive Cases by Percentage of Total Population. 
+        <p id="source">Source: <a
+            href="https://covidactnow.org/data-api?utm_term=covid%20api&utm_campaign=API&utm_source=adwords&utm_medium=ppc&hsa_acc=2362348058&hsa_cam=12135623891&hsa_grp=119598093249&hsa_ad=501258285511&hsa_src=g&hsa_tgt=kwd-890452586806&hsa_kw=covid%20api&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAlKmeBhCkARIsAHy7WVsqvo-uUzOQ2ZH7JnIYAVotpgM3UpSL4PTNNE5djYWfevBgsow6rMwaAseEEALw_wcB" target="_blank" rel="noopener noreferrer">covidactnow.org</a></p>
+    </div>
+</div>
+</body>
+<script defer src='script.js'></script>
+</html>
